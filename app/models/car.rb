@@ -26,9 +26,9 @@ class Car < ApplicationRecord
     
     validates :category, inclusion: { in: %w(car sport suv truck), message: "%{value} is not a valid category" }
     validates :cylinders, numericality: { only_integer: true, even: true, greater_than_or_equal_to: 4, less_than_or_equal_to: 12 , other_than: 10, message: "%{value} is not a valid cylinder" }
-    validates :year, numericality: { only_integer: true, greater_than_or_equal_to: 1900, less_than_or_equal_to: 2020 , message: "%{value} is not a valid year" }
+    #validates :year, numericality: { only_integer: true, greater_than_or_equal_to: 1900, less_than_or_equal_to: 2020 , message: "%{value} is not a valid year" }
     #validates :cylinder, inclusion: { in: [4, 6, 8, 10], message: "is not a cylinder" }
-    #validates :year, inclusion: { in: 1900..2020, message: "is not a valid yeat" }
+    validates :year, inclusion: { in: 1900..2020, message: "is not a valid year" }
     #validates :category, inclusion: { in: [car, sport, suv, truck], message: "is not a valid category" }    
 
 
