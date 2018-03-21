@@ -46,7 +46,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'selenium-webdriver'
-  
+  gem 'font-awesome-sass'
   
   
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
